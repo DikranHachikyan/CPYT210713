@@ -16,16 +16,41 @@ class Point():
         self.x += dx
         self.y += dy
 
+    # getter
+    @property
+    def x(self):
+        return self.__x
+
+    # setter
+    @x.setter
+    def x(self,x):
+        assert type(x) is int and x >= 0, 'x must be positive number'
+        self.__x = x
+
+    @property
+    def y(self):
+        return self.__y
+
+    @y.setter
+    def y(self, y):
+        assert type(y) is int and y >= 0, 'y must be positive number'
+        self.__y = y
+
+    # специални методи
+    
+
 if __name__ == '__main__':
     # 2. променлива (обект) от тип Point
     # клас - типа (Point), обект - представител на класа т.е. променливата 
     p1 = Point()
     p2 = Point(12,20)
-   
-    print(f'Point: ({p1.x}, {p1.y})')
+
+    print(f'point ({p1.x}, {p1.y}) (getters)')
+
+    p1.x = 14
+    p1.y = 32
+
     p1.draw()
-    p2.draw()
-    p2.move_to(-5, 10)
-    p2.draw()
+   
 
     print('---')

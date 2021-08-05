@@ -22,10 +22,9 @@ if __name__ == '__main__':
     p1 = Point()
     p2 = Point(12,20)
    
-    print(f'Point: ({p1.x}, {p1.y})')
+    p1.x = 20
+    
     p1.draw()
-    p2.draw()
-    p2.move_to(-5, 10)
-    p2.draw()
+   
 
     print('---')
